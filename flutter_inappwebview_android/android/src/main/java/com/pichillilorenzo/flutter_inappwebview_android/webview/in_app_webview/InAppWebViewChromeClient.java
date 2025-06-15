@@ -884,7 +884,7 @@ public class InAppWebViewChromeClient extends WebChromeClient implements PluginR
     onShowFileChooser(new ShowFileChooserRequest(0, acceptTypes, false, null, null), filePathCallback);
   }
 
-  protected void openFileChooser(ValueCallback<Uri> filePathCallback, String acceptType, String capture) {
+  public void openFileChooser(ValueCallback<Uri> filePathCallback, String acceptType, String capture) {
     List<String> acceptTypes = new ArrayList<>();
     acceptTypes.add(acceptType);
     onShowFileChooser(new ShowFileChooserRequest(0, acceptTypes, true, null, null), filePathCallback);
